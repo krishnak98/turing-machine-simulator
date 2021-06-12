@@ -168,9 +168,9 @@ class TuringMachine
 
 int main()
 {
-	cout << "Turing Machine simulator\n";
+	cout << "Turing Machine simulator\n\n";
 	
-	freopen("input.txt", "r", stdin);
+	freopen("TuringMachineInput.txt", "r", stdin);
 	
 	TuringMachine t;
 
