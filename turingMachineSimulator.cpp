@@ -3,7 +3,7 @@ using namespace std;
 
 class TuringMachine 
 {
-	public: 
+	private:
 	set<string> states;
 	set<string> symbols;
 	string blank_symbol; 
@@ -20,7 +20,7 @@ class TuringMachine
 	string current_state;
 	bool halted; 
 
-	
+	public:
 	void initialize()
    	{
 		set_states();
@@ -160,8 +160,11 @@ class TuringMachine
 		for(int i = 0; i < 2*window + 4; ++i) cout << " ";
 		cout << "^\n";
 	}
-	
-	
+
+	bool isHalted() 
+	{
+		return halted;
+	}
 };
 
 
@@ -177,7 +180,7 @@ int main()
 	t.initialize();
 
 	while(true) {
-		if(t.halted) break;
+		if(t.isHalted()) break;
 		t.print();
 		t.step();
 	}
