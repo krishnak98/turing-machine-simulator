@@ -43,9 +43,9 @@ class TuringMachine
 			cin >> s;
 			states.insert(s);
 		}
-		cout << "states" << endl;
-		for(auto i: states) cout << i << " " ;
-		cout << endl;
+		//cout << "states" << endl;
+		//for(auto i: states) cout << i << " " ;
+		//cout << endl;
 	}
 
 	void set_symbols() {
@@ -56,14 +56,14 @@ class TuringMachine
 			cin >> s;
 			symbols.insert(s);
 		}
-		cout << "symbols" << endl;
-		for(auto i : symbols) cout << i << " ";
-		cout << endl;
+		//cout << "symbols" << endl;
+		//for(auto i : symbols) cout << i << " ";
+		//cout << endl;
 	}
 
 	void set_blank_symbol() {
 		cin >> blank_symbol;
-		cout << "Blank symbol = " << blank_symbol << endl;
+		//cout << "Blank symbol = " << blank_symbol << endl;
 	}
 	
 	void set_input_symbols() {
@@ -74,14 +74,14 @@ class TuringMachine
 			cin >> s;
 			input_symbols.insert(s);
 		}
-		cout << "Input symbols " << endl;
-		for(auto i : input_symbols) 
-			cout << i << " " << endl;
+		//cout << "Input symbols " << endl;
+		//for(auto i : input_symbols) 
+		//	cout << i << " " << endl;
 	}
 
 	void set_initial_states() {
 		cin >> initial_state;
-		cout << "Initial state =" << initial_state << endl;
+		//cout << "Initial state =" << initial_state << endl;
 	}
 
 	void set_accepting_states() {
@@ -92,10 +92,10 @@ class TuringMachine
 			cin >> s;
 			accepting_states.insert(s);
 		}
-		cout << "Accepting states" << endl;
-		for(auto i : accepting_states) {
-			cout << i << " " << endl;
-		}
+		//cout << "Accepting states" << endl;
+		//for(auto i : accepting_states) {
+		//	cout << i << " " << endl;
+		//}
 	}
 
 	void set_transitions() {
@@ -108,12 +108,12 @@ class TuringMachine
 			cin >> direction;
 			transitions[make_pair(curr_state,curr_symbol)] = make_tuple(next_state, next_symbol, direction);
 		}
-		cout << "Transitions:" << endl;
-		for(auto i: transitions) {
-			cout << i.first.first << " " << i.first.second << " " ;
-			tuple<string,string,int> s = i.second;
-			cout << get<0>(s) << " " << get<1>(s) << " " << get<2>(s) << endl;
-		}
+		//cout << "Transitions:" << endl;
+		//for(auto i: transitions) {
+		//	cout << i.first.first << " " << i.first.second << " " ;
+		//	tuple<string,string,int> s = i.second;
+		//	cout << get<0>(s) << " " << get<1>(s) << " " << get<2>(s) << endl;
+		//}
 	}
 
 
@@ -171,7 +171,6 @@ int main()
 	cout << "Turing Machine simulator\n";
 	
 	freopen("input.txt", "r", stdin);
-
 	
 	TuringMachine t;
 
