@@ -6,7 +6,17 @@ Turing machine simulator written in C++
 
 The formal definition of a turing machine is as follows: 
 
-![image](https://user-images.githubusercontent.com/21224026/121769782-2f522900-cb83-11eb-8d04-79a22e430013.png)
+A Turing machine M is a 7-tuple
+(Q, sigma, gamma, delta, q0, #, F) where
+```text 
+Q is a set of states,
+sigma is a finite set of symbols, the input alphabet,
+gamma is a finite set of symbols, the tape alphabet,
+delta is the partial transition function,
+# is a member of gamma is a symbol called blank,
+q0 is a member of Q is the initial state,
+F is a subset of Q is a set of final states.
+```
 
 But it can be thought of as an infinite tape of cells, where each cell contains a binary digit (0 or 1).
 The machine then positions reads the content of a cell, and depending on the value and the state of the machine (defined by the user), it updates the cell and moves one block to the left or right and the process repeats till the machine reaches a halt/accepting state (again defined by the user)
